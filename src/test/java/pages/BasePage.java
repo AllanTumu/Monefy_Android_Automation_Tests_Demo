@@ -5,6 +5,9 @@ package pages;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+
+import java.time.Duration;
+
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,7 +20,8 @@ public class BasePage {
 
     public BasePage( AppiumDriver appiumDriver){
 
-        PageFactory.initElements(new AppiumFieldDecorator(appiumDriver),this);
+        //PageFactory.initElements(new AppiumFieldDecorator(appiumDriver), Duration.ofSeconds(10));
+        PageFactory.initElements(new AppiumFieldDecorator(appiumDriver, Duration.ofSeconds(10)), this);
         driver=appiumDriver;
     }
 
