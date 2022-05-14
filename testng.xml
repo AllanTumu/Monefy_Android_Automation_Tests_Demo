@@ -4,6 +4,8 @@
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="tests.TestIncome" />
+			<class name="tests.TestExpenses" />
+			<class name="tests.TestAccount" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->
