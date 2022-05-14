@@ -25,6 +25,7 @@ public class TransactionsPage extends BasePage {
     {
         clickBtn(transactionAmountText);
     }
-    @AndroidFindBy (id="textViewCategoryName") MobileElement transactionCategory;
+    @AndroidFindBy (id="textViewCategoryName")
+	public MobileElement transactionCategory;
 
 }
