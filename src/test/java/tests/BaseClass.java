@@ -36,8 +36,6 @@ public class BaseClass {
         caps.setCapability(MobileCapabilityType.PLATFORM_VERSION, prop.getProperty("platformVersion"));
         caps.setCapability(MobileCapabilityType.DEVICE_NAME,prop.getProperty("deviceName"));
         caps.setCapability(MobileCapabilityType.UDID, prop.getProperty("deviceID"));
-        //caps.setCapability("appPackage", "com.monefy.app.lite");
-        //caps.setCapability("appActivity", "com.monefy.activities.main.MainActivity_ - Monefy");
         caps.setCapability("app",projectPath+"/src/test/resources/apps/monefy.apk");
         caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 60);
         caps.setCapability(MobileCapabilityType.NO_RESET, true);
