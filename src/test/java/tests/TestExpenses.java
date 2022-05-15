@@ -43,12 +43,6 @@ public class TestExpenses extends BaseClass {
 		transactionsPage.clickExistingAmount();
 		addExpensePage.clearField();
 		addExpensePage.clickNineBtn();
-		try {
-			Thread.sleep(10000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		addExpensePage.clickBackBtn();
 		homeScreen.waitForBalanceVisibility();
 		Assert.assertEquals(homeScreen.balanceAmount.getText(), "Balance -$9.00");

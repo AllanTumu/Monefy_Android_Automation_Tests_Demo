@@ -12,8 +12,8 @@ public class TestAccount extends BaseClass {
 	HomeScreen homeScreen;
 	AccountPage accountPage;
 	TransactionsPage transactionsPage;
-	String str1 = "Test";
-	String str2 = "edit";
+	String text1 = "Test";
+	String text2 = "edit";
 
 	@Test(priority = 1)
 	// add new account
@@ -24,7 +24,7 @@ public class TestAccount extends BaseClass {
 		homeScreen.clickSettings();
 		homeScreen.clickAccountsPanel();
 		homeScreen.clickAddAccount();
-		accountPage.insertAccountName(str1);
+		accountPage.insertAccountName(text1);
 		accountPage.insertInitialAmount("100");
 		driver.hideKeyboard();
 		accountPage.selectAccountImage();
@@ -39,11 +39,11 @@ public class TestAccount extends BaseClass {
 		homeScreen.clickBalanceAmount();
 		transactionsPage.clickTransaction();
 		transactionsPage.clickExistingAmount();
-		accountPage.insertAccountName(str2);
-		accountPage.insertInitialAmount("50");
+		accountPage.insertAccountName(text2);
+		accountPage.insertInitialAmount("100");
 		accountPage.clickBackBtn();
 		homeScreen.waitForBalanceVisibility();
-		Assert.assertEquals(homeScreen.balanceAmount.getText(), "Balance $50.00");
+		Assert.assertEquals(homeScreen.balanceAmount.getText(), "Balance $100.00");
 		Assert.assertEquals(transactionsPage.transactionCategory.getText(), "Balance 'edit'");
 	}
 
