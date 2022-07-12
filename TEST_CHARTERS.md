@@ -1,6 +1,6 @@
-# SQA Engineer Home Challenge
-## _Solutions to the home challenge by Senior QA engineer Allan Tumuhimbise_
-(1) Exploratory testing charters to document your testing.
+# Testing the Monefy Android Mobile Application.
+
+# Exploratory testing charters
 
 **Test 1**
 
